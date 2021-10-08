@@ -15,7 +15,7 @@ COPY package.json yarn.lock ./
 RUN yarn
 COPY . .
 
-RUN yarn build
+RUN yarn build && rm -rf /usr/local/share/.cache/yarn/*
 RUN rm src -rf
 
 # EXPOSE 8000
