@@ -12,10 +12,10 @@ FROM node:14-alpine
 WORKDIR /app
 
 COPY package.json yarn.lock ./
-RUN yarn
+RUN yarn && rm -rf /usr/local/share/.cache/yarn
 COPY . .
 
-RUN yarn build && rm -rf /usr/local/share/.cache/yarn/*
+RUN yarn build && rm -rf /usr/local/share/.cache/yarn
 RUN rm src -rf
 
 # EXPOSE 8000
