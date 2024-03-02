@@ -6,3 +6,5 @@ seatable/seatable-developer:4.3.0
 mariadb
 memcached
 redis
+
+Set password hash by `UPDATE ccnet_db.EmailUser SET passwd="PBKDF2SHA256$10000$...";`
