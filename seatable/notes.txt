@@ -1,0 +1,7 @@
+seatable/seatable-developer:4.3.0
+/opt/seatable/conf/dtable_server_config.json
+/opt/seatable/conf/dtable_web_settings.py 
+
+mariadb
+memcached
+redis
